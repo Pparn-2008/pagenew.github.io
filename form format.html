@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    a {
+        text-decoration: none;
+        color: unset;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #0e1538;
+    }
+
+    .box {
+        position: relative;
+        width: 300px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0,0,0,0.5);
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .box form {
+        color: rgb(266,266,266);
+        text-shadow: 2px 2px black;
+        z-index: 2;
+        font-size: 13px;
+    }
+
+    form h1 {
+        letter-spacing: 1px;
+        text-align: center;
+        margin-bottom: 1.5em;
+    }
+
+    .box::before {
+        content: '';
+        position: absolute;
+        width: 170px;
+        height: 140%;
+        background: linear-gradient(#00ccff,#d500f9);
+        animation: rotate 4s linear infinite;
+    }
+
+    .box::after {
+        content: '';
+        position: absolute;
+        background: #0e1538;
+        inset: 5px;
+        border-radius: 16px;
+    }
+
+    input[type="text"] {
+        padding: 2px 5px;
+        margin: 7px 0;
+        width: 100%;
+    }
+
+    input[type="password"] {
+        padding: 2px 5px;
+        margin: 7px 0;
+        width: 100%;
+    }
+
+    input[type="checkbox"] {
+        margin: 7px 0;
+    }
+
+    button {
+        letter-spacing: 1px;
+        border-radius: 15px;
+        padding: 5px 25px;
+        color: rgb(266,266,266);
+        text-shadow: 2px 2px black;
+        background-color: #d500f9;
+        border: 1px solid #d500f9;
+        margin: 15px 0;
+    }
+
+    button:hover {
+        border: 1px solid #d500f9;
+        color: #d500f9;
+        background-color: #0e1538;
+        text-shadow: 2px 2px rgb(45, 94, 149);
+    }
+
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="box">
+        <form action="">
+            <h1>LOGIN</h1><br>
+            Username <br>
+            <input type="text"><br>
+            Password <br>
+            <input type="password"><br>
+            <input type="checkbox"> Remember me 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Forgot password?</a><br>
+            <center><button type="button">LOGIN</button></center>
+        </form>
+    </div>
+</body>
+</html>
